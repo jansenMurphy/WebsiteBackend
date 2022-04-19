@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Space Diplomacy</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Personal website for recent college grad and amateur game developer"/>
+		<link rel="stylesheet" href="spaceStyle.css"/>
+        <script defer src="spacediplomacygame.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body class="flush ignore-scrollbar">
+        <div class="wholeScreen" id="grid-container">
+            <div class="optionsPanel">
+                <button id="submit-orders-button">Submit Orders</button>
+                <p>Planet Information</p>
+                <p>Change Order Type</p>
+                <button>Move</button>
+                <button>Support</button>
+                <button>Decommission</button>
+                <button>Construct</button>
+                <p id="move-command-text">To order a Move, select one of your fleets and then a system you want to move the fleet to.</p>
+                <p id="support-command-text">To order a Support, select one of your fleets, the Support location, and then the fleet you want to Support.</p>
+                <p id="decommission-command-text">To mark a Fleet for Decommission, select it</p>
+                <p id="construction-command-text">To mark an Important Location for Fleet construction, select it</p>
+            </div>
+            <div class="starfield-area" id="starfield-area">
+                <canvas id="myCanvas"></canvas>
+                <div id="starfield" class="starfield-bg coverArea"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Space Diplomacy</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Personal website for recent college grad and amateur game developer"/>
+		<link rel="stylesheet" href="spaceStyle.css"/>
+        <script defer src="spaceDiplomacyLanding.js"></script>
+
+    </head>
+    <body id="body" class="flush">
+        <div class="mass-content" id="landing-div">
+            <div class="rules-div">
+                <div class="banner">
+                    <h1 class="center-content">The Emperor is Dead!</h1>
+                </div>
+                <h2 class="center-content">Seize the Opportunity</h2>
+                <p>Space Diplomacy is a turn based political strategy game where players make and break alliances and conquer fleets so that they can control the galaxy.</p>
+                <p class="center-content">"Gain power, hold power, and deny it to others." - Matt Colville on Diplomacy</p>
+
+                <section class="center-content">
+                    <button data-modal-target="#create-game-modal">Create Game</button>
+                    <button data-modal-target="#join-game-modal">Join Game</button>
+                </section>
+
+                <p>A player wins if their faction controls enough <strong>Important</strong> systems. Each player begins the game in control over multiple star systems and multiple <strong>Fleets</strong>. During a player's turn they may <strong>Order</strong> each of their Fleets to <strong>Move</strong> to an adjacent star System or <strong>Support</strong> a Fleet's attack on an adjacent star system. If a Fleet recieves no orders, it Holds its current position. Players may also <strong>Mark</strong> Fleets for Decommission and systems for fleet Construction. Although players may submit or update Orders at any point during the turn, all Orders from all players occur simultaneously at the end of the turn.</p>
+                <image class="center-content" src="explanationimage1.pmg" alt="Missing image showing game systems"></image>
+                <p>If a player attempts to Move a Fleet into a system where another Fleet is Holding or attempting to Move into, then the move fails unless their advance is Supported so that they outnumber their opponent. When a Supported Move overpowers a fleet, that fleet will attempt to retreat to an adjacent friendly system; if it cannot retreat, the fleet is destroyed.  If a player's fleet ends its turn in a system, then that player gains control over a system.</p>
+                <image class="center-content" src="explanationimage2.pmg" alt="Missing image showing game systems"></image>
+                <p>After every turn, Fleets are built or decommissioned until the number of Fleets equals the number of Important systems under a player's control. While no Important systems are marked for Fleet Construction and a player must construct a Fleet, the safest Important undefended system creates Fleet. While no Fleets are marked for Decommission but a player must destroy a Fleet, the safest Fleet is Decommissioned.</p>
+                <image class="center-content" src="explanationimage3.pmg" alt="Missing image showing game systems"></image>
+            </div>
+
+
+            <div class="modal" id="create-game-modal">
+                <div class="modal-header">
+                    <div class="modal-title modal-text">Create Game</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+                        <form class="name-password-form">
+                            <label class="modal-text" for="player-name">Username</label>
+                            <input id="create-game-player-name" class="modal-text" name="player-name" type="text" min="3" max="20">
+                            <label class="modal-text" for="player-password">Password</label>
+                            <input id="create-game-player-password" class="modal-text" name="player-password" type="text" min="3" max="20">
+                        </form>
+                    </div>
+
+
+                    <form style="display:inline">
+                        <label class="modal-text" for="player-count">Player Count (2-8)</label>
+                        <input id="create-game-player-count" class="modal-text" name="player-count" type="number" min="2" max="8">
+                    </form>
+                    <div class="dropdown">
+                        <span id="time-between-turns" class="modal-dropdown dropdown">Time Between Turns</span>
+                        <div class="dropdown-contents">
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_5m">5 minutes</p>
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_10m">10 minutes</p>
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_30m">30 minutes</p>
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_1h">1 hour</p>
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_1d">1 day</p>
+                            <p data-dropdown-modifier="time-between-turns" class="modal-text" id="time_1w">1 week</p>
+                        </div>
+                    </div>
+                    <button data-create-game-button="#Value" class="modal-button center-content">Start and save username and password data to cookie</button>
+                </div>
+            </div>
+
+
+            <div class="modal" id="join-game-modal">
+                <div class="modal-header">
+                    <div class="modal-title">Join Game</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form class="name-password-form">
+                            <label class="modal-text" for="world-name">Galaxy</label>
+                            <input id="join-game-world-name" class="modal-text" name="world-name" type="text" min="3" max="20">
+                            <label class="modal-text" for="player-name">Username</label>
+                            <input id="join-game-player-name" class="modal-text" name="player-name" type="text" min="3" max="20">
+                            <label class="modal-text" for="player-password">Password</label>
+                            <input id="join-game-player-password" class="modal-text" name="player-password" type="text" min="3" max="20">
+                        </form>
+                    </div>
+                    <button data-join-game-button="#Value" class="modal-button center-content">Join and save username and password data to cookie</button>
+                </div>
+            </div>
+            <div id="modal-overlay"></div>
+        </div>
+    </body>
+</html>

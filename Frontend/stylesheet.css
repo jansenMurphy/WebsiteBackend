@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: #DDD;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: #FFFAE6;
+    background-color: #303030;
+}
+
+.resume{
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #505050;
+    min-height: 100%;
+    padding: 1px 20px 40px 20px;
+    border-left: .1em solid #101010;
+    border-right: .1em solid #101010;
+}
+
+.nav ul{
+    margin:0;
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom:  2px solid #DDD;
+}
+
+.main-nav li{
+    padding:0 .2em;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    padding: .5em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav a:hover{
+    background-color: rgba(255,255,255,.3);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.resume ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li{
+    flex: 0 0 1;
+    margin-right: 2em;
+    margin-bottom: .5em;
+    list-style-type: none;
+}
+
+.resume h2{
+    margin-top: 1.5em;
+}
+
+.resume p{
+    padding-left: 2em;
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-links li img{
+    max-width: 40px;
+    max-height: 40px;
+}
